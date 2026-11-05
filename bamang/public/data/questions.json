@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "level": 1,
+    "question": "Thẻ HTML nào tạo dòng tiêu đề lớn nhất?",
+    "options": ["<h6>", "<head>", "<h1>", "<title>"],
+    "answer": 2
+  },
+  {
+    "id": 2,
+    "level": 1,
+    "question": "Thuộc tính CSS nào dùng để đổi cỡ chữ?",
+    "options": ["font-size", "text-size", "font-weight", "size"],
+    "answer": 0
+  },
+  {
+    "id": 3,
+    "level": 1,
+    "question": "Thẻ HTML nào dùng để tạo một nút bấm?",
+    "options": ["<input type=\"text\">", "<button>", "<btn>", "<click>"],
+    "answer": 1
+  },
+  {
+    "id": 4,
+    "level": 1,
+    "question": "Lệnh nào in dữ liệu ra tab Console của trình duyệt?",
+    "options": ["print()", "console.log()", "alert.log()", "document.write()"],
+    "answer": 1
+  },
+  {
+    "id": 5,
+    "level": 1,
+    "question": "Lệnh nào tạo một project React mới bằng Create React App?",
+    "options": [
+      "npm start react",
+      "npx create-react-app ten-app",
+      "npm install react-app",
+      "react new ten-app"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 6,
+    "level": 2,
+    "question": "Kết quả của 2 + \"3\" trong JavaScript là gì?",
+    "options": ["5", "\"23\"", "NaN", "Lỗi"],
+    "answer": 1
+  },
+  {
+    "id": 7,
+    "level": 2,
+    "question": "Đơn vị CSS nào tính theo cỡ chữ của thẻ <html>?",
+    "options": ["px", "em", "rem", "%"],
+    "answer": 2
+  },
+  {
+    "id": 8,
+    "level": 2,
+    "question": "Để component con gửi dữ liệu lên cha, cha cần truyền gì xuống qua props?",
+    "options": [
+      "Một hàm callback",
+      "Một biến state",
+      "Một thẻ HTML",
+      "Một file JSON"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 9,
+    "level": 2,
+    "question": "Component nào tạo liên kết chuyển trang mà không tải lại trang?",
+    "options": ["<a>", "<Route>", "<Link>", "<Router>"],
+    "answer": 2
+  },
+  {
+    "id": 10,
+    "level": 2,
+    "question": "Biểu thức { ...user, age: 20 } có tác dụng gì?",
+    "options": [
+      "Sửa trực tiếp object user",
+      "Xóa trường age của user",
+      "Báo lỗi cú pháp",
+      "Tạo object mới từ user, đặt age bằng 20"
+    ],
+    "answer": 3
+  },
+  {
+    "id": 11,
+    "level": 3,
+    "question": "Với axios, dữ liệu JSON server trả về nằm ở thuộc tính nào của response?",
+    "options": [
+      "response.json",
+      "response.body",
+      "response.data",
+      "response.result"
+    ],
+    "answer": 2
+  },
+  {
+    "id": 12,
+    "level": 3,
+    "question": "[\"b\", \"a\", \"c\"].sort() trả về kết quả nào?",
+    "options": [
+      "[\"a\", \"b\", \"c\"]",
+      "[\"c\", \"b\", \"a\"]",
+      "[\"b\", \"a\", \"c\"]",
+      "undefined"
+    ],
+    "answer": 0
+  },
+  {
+    "id": 13,
+    "level": 3,
+    "question": "Hàm cleanup của useEffect được chạy khi nào?",
+    "options": [
+      "Trước lần render đầu tiên",
+      "Trước khi effect chạy lại và khi component bị gỡ",
+      "Chỉ khi có lỗi",
+      "Sau mỗi lần gọi setState"
+    ],
+    "answer": 1
+  },
+  {
+    "id": 14,
+    "level": 3,
+    "question": "Thuộc tính nào giúp NavLink trỏ tới \"/\" không active ở mọi trang?",
+    "options": ["exact", "index", "strict", "end"],
+    "answer": 3
+  },
+  {
+    "id": 15,
+    "level": 3,
+    "question": "const a = [1, 2]; const b = a; b.push(3); a.length bằng bao nhiêu?",
+    "options": ["2", "3", "1", "Lỗi"],
+    "answer": 1
+  }
+]
