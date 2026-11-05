@@ -2,7 +2,15 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import NavBar from './NavBar';
 
-const Layout = ({ loading, error, questions }) => {
+const Layout = ({
+  loading,
+  error,
+  questions,
+  playerName,
+  setPlayerName,
+  history,
+  setHistory,
+}) => {
   return (
     <div className="layout">
       <NavBar />
@@ -12,7 +20,17 @@ const Layout = ({ loading, error, questions }) => {
         ) : error ? (
           <div className="error-state">{error}</div>
         ) : (
-          <Outlet context={{ questions, loading, error }} />
+          <Outlet
+            context={{
+              questions,
+              loading,
+              error,
+              playerName,
+              setPlayerName,
+              history,
+              setHistory,
+            }}
+          />
         )}
       </main>
     </div>

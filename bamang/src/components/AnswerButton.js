@@ -5,10 +5,22 @@ const AnswerButton = ({
   option,
   isSelected,
   isCorrect,
+  isHidden,
   status,
   disabled,
   onClick,
 }) => {
+  if (isHidden) {
+    return (
+      <button
+        type="button"
+        className="answer-btn hidden-option"
+        disabled={true}
+        style={{ visibility: 'hidden', pointerEvents: 'none' }}
+      />
+    );
+  }
+
   let buttonStyle = {};
   let buttonClass = 'answer-btn';
 

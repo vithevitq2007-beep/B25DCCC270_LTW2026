@@ -1,13 +1,20 @@
 import React from 'react';
 import { useNavigate, useOutletContext } from 'react-router-dom';
+import { formatScore } from '../data';
 
-const Home = ({ playerName: propName, setPlayerName: propSetName }) => {
+const Home = ({
+  playerName: propName,
+  setPlayerName: propSetName,
+  history: propHistory,
+}) => {
   const navigate = useNavigate();
   const outletData = useOutletContext() || {};
   const playerName =
     propName !== undefined ? propName : outletData.playerName || '';
   const setPlayerName =
     propSetName || outletData.setPlayerName || (() => {});
+  const history =
+    propHistory !== undefined ? propHistory : outletData.history || [];
 
   const handleStart = (e) => {
     e.preventDefault();
@@ -16,9 +23,23 @@ const Home = ({ playerName: propName, setPlayerName: propSetName }) => {
     }
   };
 
+  const bestRecord =
+    history && history.length > 0
+      ? [...history].sort((a, b) => {
+          if (b.score !== a.score) return b.score - a.score;
+          return b.livesLeft - a.livesLeft;
+        })[0]
+      : null;
+
   return (
     <div className="page home-page">
       <h2>Thử thách 3 mạng</h2>
+
+      {bestRecord && (
+        <p className="high-score">
+          {`Kỷ lục: ${formatScore(bestRecord.score)} – ${bestRecord.name}`}
+        </p>
+      )}
 
       <div className="rules-summary">
         <p><strong>Luật chơi:</strong></p>

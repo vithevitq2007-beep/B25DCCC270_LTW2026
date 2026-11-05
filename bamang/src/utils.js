@@ -19,7 +19,6 @@ export const calcScore = (results, questions) => {
           streak: 0,
         };
       } else {
-        // e.g. 'skipped'
         return {
           score: acc.score,
           streak: acc.streak,

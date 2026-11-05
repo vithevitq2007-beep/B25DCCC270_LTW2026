@@ -7,6 +7,7 @@ const QuestionCard = ({
   questionNumber,
   totalQuestions,
   selectedAnswer,
+  hiddenOptions = [],
   status,
   onSelectAnswer,
 }) => {
@@ -30,6 +31,7 @@ const QuestionCard = ({
             option={option}
             isSelected={selectedAnswer === index}
             isCorrect={index === question.answer}
+            isHidden={hiddenOptions.includes(index)}
             status={status}
             disabled={status !== 'answering'}
             onClick={() => onSelectAnswer(index)}

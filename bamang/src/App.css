@@ -71,10 +71,20 @@ body {
   font-weight: 600;
 }
 
-/* Home Page */
 .home-page h2 {
   margin-top: 0;
   color: #0f172a;
+}
+
+.high-score {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #d97706;
+  background-color: #fef3c7;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .rules-summary {
@@ -137,7 +147,6 @@ body {
   opacity: 0.9;
 }
 
-/* Play Page */
 .status-bar {
   display: flex;
   flex-direction: column;
@@ -163,7 +172,7 @@ body {
 .progress-bar {
   display: flex;
   gap: 0.35rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
 
@@ -178,6 +187,34 @@ body {
   font-size: 0.85rem;
   font-weight: 600;
   transition: all 0.2s;
+}
+
+.helpers-container {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.helper-btn {
+  padding: 0.55rem 1.15rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #0284c7;
+  color: #ffffff;
+  transition: opacity 0.2s;
+}
+
+.helper-btn:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.helper-btn:not(:disabled):hover {
+  opacity: 0.9;
 }
 
 .question-card {
@@ -225,7 +262,6 @@ body {
   cursor: default;
 }
 
-/* Result Page */
 .result-page h2 {
   color: #0f172a;
   margin-top: 0;
@@ -276,7 +312,58 @@ body {
   opacity: 0.9;
 }
 
-/* Question Bank */
+.history-summary {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.history-summary p {
+  margin: 0.25rem 0;
+}
+
+.clear-history-btn {
+  padding: 0.55rem 1.15rem;
+  background-color: #dc2626;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+  transition: opacity 0.2s;
+}
+
+.clear-history-btn:hover {
+  opacity: 0.9;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table th,
+.history-table td {
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.history-table th {
+  background-color: #f1f5f9;
+  font-weight: 600;
+}
+
+.history-table tr:hover {
+  background-color: #f8fafc;
+}
+
 .filter-controls {
   display: flex;
   gap: 0.75rem;
@@ -357,7 +444,6 @@ body {
   text-decoration: underline;
 }
 
-/* Question Detail */
 .question-content {
   font-size: 1.1rem;
   font-weight: 500;
