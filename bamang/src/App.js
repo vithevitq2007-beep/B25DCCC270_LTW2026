@@ -5,6 +5,8 @@ import { Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 import Layout from './components/Layout';
 import Home from './pages/Home';
+import Play from './pages/Play';
+import Result from './pages/Result';
 import QuestionBank from './pages/QuestionBank';
 import QuestionDetail from './pages/QuestionDetail';
 import NotFound from './pages/NotFound';
@@ -63,9 +65,25 @@ const App = () => {
           />
         }
       >
-        <Route index element={<Home />} />
-        <Route path="play" element={<h2>Màn hình chơi</h2>} />
-        <Route path="result" element={<h2>Kết quả lượt chơi</h2>} />
+        <Route
+          index
+          element={
+            <Home
+              playerName={playerName}
+              setPlayerName={setPlayerName}
+            />
+          }
+        />
+        <Route
+          path="play"
+          element={
+            <Play
+              playerName={playerName}
+              questions={questions}
+            />
+          }
+        />
+        <Route path="result" element={<Result />} />
         <Route path="history" element={<h2>Lịch sử các lượt chơi</h2>} />
         <Route
           path="questions"
